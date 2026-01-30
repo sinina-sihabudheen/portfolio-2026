@@ -16,7 +16,7 @@ const About = () => {
                     >
                         <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-slate-800 overflow-hidden relative group shadow-2xl shadow-primary/10">
                             <img
-                                src={portfolioData.personal.image}
+                                src={`${import.meta.env.BASE_URL}${portfolioData.personal.image}`}
                                 alt={portfolioData.personal.name}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
@@ -54,15 +54,15 @@ const About = () => {
                                     <p className="text-white font-medium">B-TECH CS</p>
                                 </div>
                             </div>
-                            <div className="pt-8 flex gap-4">
-                                <a
-                                    href="resume-new.pdf"
-                                    download="Sinina_Sihabudheen_Resume.pdf"
-                                    className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-lg border border-white/10 transition-all font-semibold flex items-center gap-2"
-                                >
-                                    Download Resume
-                                </a>
-                            </div>
+                        </div>
+                        <div className="pt-8 flex gap-4">
+                            <a
+                                href={`${import.meta.env.BASE_URL}resume-new.pdf`}
+                                download="Sinina_Sihabudheen_Resume.pdf"
+                                className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-lg border border-white/10 transition-all font-semibold flex items-center gap-2"
+                            >
+                                Download Resume
+                            </a>
                         </div>
                     </motion.div>
                 </div>
