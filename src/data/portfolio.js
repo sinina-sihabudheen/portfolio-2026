@@ -7,6 +7,7 @@ export const portfolioData = {
         phones: ["+91 9526997010", "+971 588597727"],
         tagline: "Building scalable and efficient web solutions with a focus on Python and modern JavaScript.",
         about: "B-TECH Computer Science graduate (2013) with a dedicated focus on overcoming a 10-year career break. Previously worked as a Mathematics and Computer teacher in the UAE. Currently a passionate developer committed to building a career as an experienced professional in coding.",
+        image: "/src/assets/profile.jpg",
     },
     skills: [
         { name: "Python", level: 85, category: "Backend" },

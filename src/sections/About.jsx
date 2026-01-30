@@ -14,15 +14,16 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-slate-800 overflow-hidden flex items-center justify-center relative group">
-                            {/* Placeholder for new image */}
-                            <div className="text-slate-600 text-6xl font-bold opacity-20 transition-opacity group-hover:opacity-40">
-                                PHOTO
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-darker/60 to-transparent"></div>
+                        <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-slate-800 overflow-hidden relative group shadow-2xl shadow-primary/10">
+                            <img
+                                src={portfolioData.personal.image}
+                                alt={portfolioData.personal.name}
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-darker/80 via-transparent to-transparent opacity-60"></div>
                             <div className="absolute bottom-6 left-6">
-                                <p className="text-white font-bold text-xl">{portfolioData.personal.name}</p>
-                                <p className="text-primary text-sm font-medium">{portfolioData.personal.title}</p>
+                                <p className="text-white font-bold text-xl drop-shadow-lg">{portfolioData.personal.name}</p>
+                                <p className="text-primary text-sm font-medium drop-shadow-md">{portfolioData.personal.title}</p>
                             </div>
                         </div>
                         {/* Decorative element */}
@@ -55,10 +56,11 @@ const About = () => {
                             </div>
                             <div className="pt-8 flex gap-4">
                                 <a
-                                    href="#contact"
-                                    className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-lg border border-white/10 transition-all font-semibold"
+                                    href="/resume-new.pdf"
+                                    download="Sinina_Sihabudheen_Resume.pdf"
+                                    className="px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-lg border border-white/10 transition-all font-semibold flex items-center gap-2"
                                 >
-                                    Download CV
+                                    Download Resume
                                 </a>
                             </div>
                         </div>
